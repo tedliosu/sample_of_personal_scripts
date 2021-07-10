@@ -239,9 +239,9 @@ stat_crtime () {
             #     out for any file by the "stat" program.
             elif [ "${filesystem_type%%?}" = "ext" ]; then
                local file_inode="$(stat --format="%i" "$file")" && \
-                  file_crtime="$(debugfs -R "stat <$file_inode>" \
-                                            "$filesys_loc" 2>&1 | \
-                                      grep "crtime" | cut -d" " -f4-)" && \
+                  file_crtime="$($sudo_cmd debugfs -R "stat <$file_inode>" \
+                                                     "$filesys_loc" 2>&1 | \
+                                               grep "crtime" | cut -d" " -f4-)" && \
                   file_crtime="$(date --date "$file_crtime" +"%Y-%m-%d %T.%N %z")"
                echo -e " File: $file\nBirth: ${file_crtime:--}"
             
@@ -313,7 +313,8 @@ stat_crtime () {
                #     times to the user.
                if [ "$filesystem_type" = "ntfs" ]; then
 
-                  local ntfsinfo_result="$(ntfsinfo --file "$file_relative_path" "$fs_mirror")" && \
+                  local ntfsinfo_result="$($sudo_cmd ntfsinfo --file \
+                                               "$file_relative_path" "$fs_mirror")" && \
                      file_crtime="$(echo "$ntfsinfo_result" | \
                                        grep --max-count=1 "File Creation Time" | \
                                                    tr -s "\t" " " | cut -d" " -f5-)" && \
@@ -355,7 +356,7 @@ stat_crtime () {
                      # Get all of the starting locations and sizes of each file
                      #     fragment for the file currently being processed from
                      #     the underlying exFAT filesystem.
-                     local dir_sizes_n_locations="$(dumpexfat -f "$file_relative_dir" \
+                     local dir_sizes_n_locations="$($sudo_cmd dumpexfat -f "$file_relative_dir" \
                                                                       "$fs_mirror" 2>&1 | tail -n+2)"
                      # Next twenty-one lines of code iterates through each file
                      #    fragment using "dd" by directly reading the filesystem's
@@ -383,7 +384,7 @@ stat_crtime () {
                                                                                   cut -d" " -f1)"; \
                                             local dir_frag_size="$(echo "$frag_info" | \
                                                                            cut -d" " -f2)"; \
-                                            exfat_file_info="$(dd status=none \
+                                            exfat_file_info="$($sudo_cmd dd status=none \
                                                                   iflag=skip_bytes,count_bytes \
                                                                   skip="$dir_frag_byte_offset" \
                                                                   count="$dir_frag_size" \
