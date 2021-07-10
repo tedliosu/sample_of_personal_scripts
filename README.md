@@ -10,12 +10,13 @@
 
 ## For "stat_crtime_function.sh" ##
 
- 1. `debugfs` (`sudo -H apt install e2fsprogs` on Ubuntu)
- 2. `ntfsinfo` (`sudo -H apt install ntfs-3g` on Ubuntu)
- 3. `dumpexfat` (`sudo -H apt install exfat-utils` on Ubuntu)
- 4. `losetup` (`sudo -H apt install mount` on Ubuntu)
- 5. `flock` (`sudo -H apt install util-linux` on Ubuntu)
- 6. `python3` (`sudo -H apt install python3.8-minimal` on Ubuntu)
+ 1. `oksh` (`sudo -H add-apt-repository ppa:dysfunctionalprogramming/oksh && sudo -H apt install oksh` on Ubuntu)
+ 2. `debugfs` (`sudo -H apt install e2fsprogs` on Ubuntu)
+ 3. `ntfsinfo` (`sudo -H apt install ntfs-3g` on Ubuntu)
+ 4. `dumpexfat` (`sudo -H apt install exfat-utils` on Ubuntu)
+ 5. `losetup` (`sudo -H apt install mount` on Ubuntu)
+ 6. `flock` (`sudo -H apt install util-linux` on Ubuntu)
+ 7. `python3` (`sudo -H apt install python3.8-minimal` on Ubuntu)
 
 ## For "draw_io_install_latest.sh" ##
 

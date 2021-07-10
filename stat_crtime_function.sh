@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/oksh
 
 # Temporary workaround for lack of file birth time field in a "stat" command output
 #   until Ubuntu 22.04.02 LTS releases; the following function accepts a list of one
