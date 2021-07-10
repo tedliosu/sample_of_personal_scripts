@@ -208,9 +208,9 @@ stat_crtime () {
             #     mountpoint-file-system-type pair within the
             #     dictionary.
             if [ -z "$filesystem_type" ]; then
-               filesystem_type="$(blkid | tr -s "=\"" " " | \
-                                      grep "$filesys_loc" | \
-                                      egrep --only-matching "$supported_fs_regex")"
+               filesystem_type="$($sudo_cmd blkid | tr -s "=\"" " " | \
+                                                grep "$filesys_loc" | \
+                                                egrep --only-matching "$supported_fs_regex")"
                test -z "$filesystem_type" && filesystem_type="$unsupported_fs_keyword"
                mount_pt_fs_type_array="$(python3 -c "$python3_query_xor_update_script" \
                                           "$mount_pt_fs_type_array" "$filesystem_mount_pt" \
