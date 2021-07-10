@@ -12,7 +12,7 @@
 #   into any ".bashrc" or ".kshrc" file under a user's "~" directory. That way, the
 #   user can have access to the following function from any directory the user wishes
 #   to set as the working directory inside a bash terminal.
-stat-crtime () {
+stat_crtime () {
 
    # Field separator to switch to when parsing file names with spaces
    #     in them from the command line.
@@ -487,5 +487,5 @@ stat-crtime () {
    fi
 }
 
-stat-crtime "$@"
+stat_crtime "$@"
 
