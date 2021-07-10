@@ -23,7 +23,7 @@
 
  1. `curl` (`sudo -H apt install curl` on Ubuntu)
  2. `jq.node` (`sudo -H apt install npm` if needed, and then `sudo -H npm install jq.node -g`)
- 3. `dpkg` (Yes you must be running a Debian distro to use this script.)
+ 3. `dpkg` (Yes, you must be running a distro which uses the Debian package manager to use this script.)
 
 # How to Run Each Script #
 
