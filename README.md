@@ -1,7 +1,8 @@
 
 # Overview of This Repository #
 
- - Each of these scripts was written to automate a certain task for my convenience, and hopefully
+ - Each of these scripts was written to automate a certain task (e.g. querying file
+   creation times, installing programs, etc.) for my convenience, and hopefully
    may make some other Linux/Unix distro users' lives just a bit easier too.
 
  - Please refer to the comments at the top of each script for more info on what each script does.
