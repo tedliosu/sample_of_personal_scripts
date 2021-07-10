@@ -9,7 +9,8 @@
 #   provided for each file as each argument to this function.
 #
 # I wrote the following code as one big function so that the function can be inserted
-#   into any ".bashrc" or ".kshrc" file under a user's "~" directory. That way, the
+#   into any ".bashrc" or ".kshrc" file under a user's "~" directory after replacing
+#   all "$0" variables with "stat_crtime" (i.e. the function name). That way, the
 #   user can have access to the following function from any directory the user wishes
 #   to set as the working directory inside a bash terminal.
 stat_crtime () {
