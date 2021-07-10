@@ -4,9 +4,9 @@
 #   until Ubuntu 22.04.02 LTS releases; the following function accepts a list of one
 #   or more file names as the argument(s) on the command line, and then for each file
 #   name prints to stdout the creation time of the associated file. The function is
-#   able to do that for any file stored in an ext2, ext3, ext4, ntfs, or exfat file
-#   system, as long as a valid relative or absolute filepath is provided for each file
-#   as each argument to this function.
+#   able to do that for any REGULAR file or directory stored in an ext2, ext3, ext4,
+#   ntfs, or exfat file system, as long as a valid relative or absolute filepath is
+#   provided for each file as each argument to this function.
 #
 # I wrote the following code as one big function so that the function can be inserted
 #   into any ".bashrc" or ".kshrc" file under a user's "~" directory. That way, the
