@@ -25,6 +25,10 @@
  2. `jq.node` (`sudo -H apt install npm` if needed, and then `sudo -H npm install jq.node -g`)
  3. `dpkg` (Yes, you must be running a distro which uses the Debian package manager to use this script.)
 
+## For "update_all_python_stuff.sh" ##
+
+ 1. Full python install; comment out or edit the `pip install`s in the script that refer to specific paths within `$HOME` directory.
+
 # How to Run Each Script #
 
 ## For "stat_crtime_function.sh" ##
@@ -34,6 +38,10 @@
 ## For "draw_io_install_latest.sh" ##
 
 - Usage: `./draw_io_install_latest.sh [--verbose]`
+
+## For "update_all_python_stuff.sh" ##
+
+- Usage: `./update_all_python_stuff.sh`
 
 # TODOs #
 
@@ -46,4 +54,7 @@
     that generator script also showcases my basic AWK coding skills, but I certainly won't
     want to risk others having an easier time hacking my University accounts by making
     that script public.
+
+- Explain more about "update_all_python_stuff.sh" in this README
+
 
