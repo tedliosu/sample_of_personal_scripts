@@ -171,7 +171,7 @@ function main() {
     #     filter and then delete the JSON document once we've successfully
     #     obtained the download link (by using grep to grab the link with
     #     the ".deb" extension in the link).
-    deb_pkg_url="$(echo "$download_links" | egrep "\-.+deb")" && \
+    deb_pkg_url="$(echo "$download_links" | egrep "amd64.+deb")" && \
                                           rm $REMOVE_OPTS "$GITHUB_API_JSON_MAIN"
     # Next four lines of code inform the user that we're now downloading the
     #     debian package of "draw.io" and downloads the package using curl
