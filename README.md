@@ -19,7 +19,7 @@
  6. `flock` (`sudo -H apt install util-linux` on Ubuntu)
  7. `python3` (`sudo -H apt install python3.8-minimal` on Ubuntu)
 
-## For "draw_io_install_latest.sh" ##
+## For "github_install_latest.sh" ##
 
  1. `curl` (`sudo -H apt install curl` on Ubuntu)
  2. `jq.node` (`sudo -H apt install npm` if needed, and then `sudo -H npm install jq.node -g`)
@@ -35,9 +35,9 @@
 
 - `./stat_crtime_function.sh` for more info.
 
-## For "draw_io_install_latest.sh" ##
+## For "github_install_latest.sh" ##
 
-- Usage: `./draw_io_install_latest.sh [--verbose]`
+- Usage: `./github_install_latest.sh [--package PACKAGE_NAME] [--verbose]`
 
 ## For "update_all_python_stuff.sh" ##
 

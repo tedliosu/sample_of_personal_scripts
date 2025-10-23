@@ -1,0 +1,12 @@
+[
+ {
+     "name": "draw.io",
+     "query_url": "https://api.github.com/repos/jgraph/drawio-desktop/releases/latest",
+     "deb_regex": "amd64.+deb"
+ },
+ {
+     "name": "fastfetch",
+     "query_url": "https://api.github.com/repos/fastfetch-cli/fastfetch/releases/latest",
+     "deb_regex": "amd64(?!\\-polyfilled).+deb"
+ }
+]
